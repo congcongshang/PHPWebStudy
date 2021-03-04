@@ -47,6 +47,43 @@ function AllString(){
     echo str_shuffle($str);
 
 }
-AllString();
+
+function arrayTest(){
+    $arr = ['张三','李四','王五','赵六','陈七'];
+    echo var_dump(in_array('赵六', $arr))."<br/>"; //检查数组中是否存在某元素
+
+    $arr = [1,2,3,4,5];
+    $point = ',';
+    echo implode($point, $arr)."<br/>"; // 将数组转换成一个字符串
+
+    $food = ['firuits'=>['orange','banana','apple'],'veggie'=>['carrot','collard','pea']];
+    echo count($food,1)."<br/>"; // 统计数组元素数量
+    echo count($food)."<br/>";
+
+    $food = ['orange','banana','apple'];
+    echo current($food)."<br/>";  // 获取当前指针指向的元素
+    echo next($food)."<br/>";     // 将当前指针向前移动一位并返回数值
+    echo prev($food)."<br/>";     // 将当前指针倒退一位并返回数值
+    echo end($food)."<br/>";     // 指向最后一个单元返回数值
+    echo reset($food)."<br/>";     // 指向第一个单元返回数值
+
+    $array = array(
+        'firuits1' =>'Orange',
+        'firuits2' =>'apple',
+        'firuits3' =>'banana',
+        'firuits4' =>'pear',
+        'firuits5' =>'Orange'
+    );
+    for($i=0;$i<count($array);$i++){
+        echo key($array)."<br/>"; // 输出指针指向的单元键
+        next($array);
+    }
+
+    print_r($food); // 输出数组
+
+
+}
+
+arrayTest();
 
 ?>
