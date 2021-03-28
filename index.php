@@ -84,6 +84,6 @@ function arrayTest(){
 
 }
 
-arrayTest();
+phpinfo();
 
 ?>
